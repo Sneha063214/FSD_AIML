@@ -15,6 +15,10 @@ table{
     width:90%;
     font-size: 20px;
     background-color: rgb(78, 200, 200);
-    color: rgb(47, 143, 198);
+    color: rgb(5, 75, 116);
     border: 1px solid blue;
+    border-collapse: collapse;
+}
+td,th{
+  border:2px solid rgb(116, 12, 154);
 }

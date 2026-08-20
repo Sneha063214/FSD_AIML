@@ -1,5 +1,6 @@
 const element =document.getElementById("data")
 const URL="https://dummyjson.com/products?limit=100&skip=5"
+
 async function loadPrducts(){
     try{
       const res= await fetch(URL)
@@ -17,8 +18,6 @@ async function loadPrducts(){
         <td>${i.stock}</td>
         <td><img src=${i.images[0]} height="150px" width="150px"></td>
         <td><img src=${i.meta.qrCode}height="150px" width="150px"></td>
-        
-
         </tr>
 
         `
