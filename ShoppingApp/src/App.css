@@ -1,0 +1,36 @@
+
+
+.header{
+  width:100vw;
+  height:10vh;
+  background-color: black;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer{
+  width:100vw;
+  height:6vh;
+  background-color: black;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar{
+  background-color: brown;
+  display: flex;
+  justify-content: space-between;
+  color:white;
+  height:4vh;
+}
+.home{
+  width:100vw;
+  height:80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
