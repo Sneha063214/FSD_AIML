@@ -251,13 +251,13 @@ const [items, setItems] = useState([]);
 useEffect(()=>{
     loadProducts();
 },[])
-const data=[];
+
 async function loadProducts(){
     const URL="https://fakestoreapi.com/products";
     try{
         const res=await fetch(URL);
-        data=await res.json();
-        setItems(data.products);
+        const data=await res.json();
+        setItems(data);
     }
     catch(err){
         console.log("Error=",err);
@@ -267,7 +267,7 @@ async function loadProducts(){
   return (
     <div className='home'>
          {
-            data.map((elem)=>{
+            items.map((elem)=>{
                 return <Item key={elem.id} product={elem}/>
             })
         }
