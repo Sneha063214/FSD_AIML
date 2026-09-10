@@ -21,9 +21,13 @@
 .navbar{
   background-color: brown;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   color:white;
   height:4vh;
+}
+.navbar a{
+  color:white;
+  text-decoration: none;
 }
 .home{
   width:100vw;
@@ -32,5 +36,7 @@
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  overflow-y: scroll;
+  background-color: rgb(86, 81, 81);
 }
 

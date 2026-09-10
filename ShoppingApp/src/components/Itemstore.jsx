@@ -1,11 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useState } from 'react'
+
 import Item from './Item'
-import { Outlet } from 'react-router-dom'
-
-
-const Home = () => {
- 
-//     const data=[
+const Itemstore = () => {
+//         const data=[
   
 //   {
 //     "id": 1,
@@ -249,11 +247,32 @@ const Home = () => {
 //   }
   
 // ]  
+const [items, setItems] = useState([]);
+useEffect(()=>{
+    loadProducts();
+},[])
+const data=[];
+async function loadProducts(){
+    const URL="https://fakestoreapi.com/products";
+    try{
+        const res=await fetch(URL);
+        data=await res.json();
+        setItems(data.products);
+    }
+    catch(err){
+        console.log("Error=",err);
+        
+    }
+}
   return (
     <div className='home'>
-       <Outlet/>
+         {
+            data.map((elem)=>{
+                return <Item key={elem.id} product={elem}/>
+            })
+        }
     </div>
   )
 }
 
-export default Home
+export default Itemstore

@@ -5,9 +5,9 @@ import "./Item.css"
 const Item = ({product}) => {
   return (
     <div className='card'>
-        <img src={product.image} alt="item image" height={50} width={50}/>
-        <h2>title:{product.title}</h2>
-        <h3>price:{product.price}$</h3>
+        <img src={product.image} alt="item image" height={100} width={100}/>
+        <h2>{product.title}</h2>
+        <h3 className='price'>{product.price}$</h3>
         <button className='btn'>AddToCart</button>
     </div>
   )
