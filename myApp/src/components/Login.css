@@ -1,0 +1,21 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,body{
+  height:100%;
+  width:100%;
+  /* background-color:black; */
+}
+
+button{
+    padding: 20px;
+    background-color: rgb(107, 60, 68);
+    border-radius: 30px;
+    border: 2px solid black;
+    font-size: 30px;
+    color:white;
+
+}
